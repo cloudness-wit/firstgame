@@ -2,15 +2,6 @@
 
 Protótipo de jogo vertical em TypeScript e Canvas 2D. O projeto mantém os assets disponíveis em `public/assets/` e gera os módulos JavaScript e arquivos estáticos em `dist/`, usados também pelos projetos nativos Capacitor.
 
-## Executar na web
-
-1. Instale Node.js 22 ou superior.
-2. Rode `npm install`.
-3. Rode `npm run build`.
-4. Sirva o projeto por HTTP e abra `index.html`, ou sirva a pasta `dist/`.
-5. Rode `npm run typecheck` para verificar os tipos sem emitir arquivos.
-6. Rode `npm run validate` para executar os testes das regras centrais e validar os builds web/Android/iOS.
-
 ## Controles
 
 - **A / seta esquerda** e **D / seta direita**: mover no teclado.
@@ -47,14 +38,5 @@ O controle por inclinação usa `DeviceOrientationEvent`, solicita permissão qu
 - `scripts/copy-static.mjs`: copia HTML, CSS, assets e módulos de plugins para `dist/`.
 - `capacitor.config.json`: configuração dos projetos nativos.
 - `android/` e `ios/`: projetos de plataforma gerados pelo Capacitor.
-
-## Build e limites de validação
-
-- `npm run typecheck`: `tsc --noEmit`.
-- `npm run build`: limpa e emite os módulos JavaScript, gera `dist/`, atualiza os diretórios Android/iOS e valida as saídas.
-- `npm test`: recompila/valida e executa a suíte de regras com `node --test`.
-- `npm run validate`: executa a verificação TypeScript e todos os testes/build checks.
-- `npm run cap:sync`: build web e sincronização dos projetos Android/iOS.
-- `npm run cap:android` e `npm run cap:ios`: sincronizam e abrem a plataforma correspondente.
 
 Não foi feita compilação nativa assinada nem teste em dispositivo físico. Android requer Android Studio e SDK; iOS requer macOS e Xcode. Capacitor 8 requer Node.js 22 ou superior.
