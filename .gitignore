@@ -1,0 +1,45 @@
+# Dependencies and generated web builds
+node_modules/
+dist/
+coverage/
+*.log
+npm-debug.log*
+
+# Local credentials and private machine configuration
+.env
+.env.*
+!.env.example
+.npmrc
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+*.mobileprovision
+*.provisionprofile
+key.properties
+local.properties
+**/GoogleService-Info.plist
+**/google-services.json
+
+# Capacitor-generated web bundles and plugin manifests
+android/app/src/main/assets/public/
+android/app/src/main/assets/capacitor.config.json
+android/app/src/main/assets/capacitor.plugins.json
+ios/App/App/public/
+
+# Android / Gradle build output
+.gradle/
+**/build/
+
+# Xcode / CocoaPods local output
+Pods/
+DerivedData/
+**/xcuserdata/
+*.xcuserstate
+
+# Release binaries
+*.apk
+*.aab
+*.ipa

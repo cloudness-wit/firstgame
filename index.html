@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#131826" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <title>HOPRISE</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "@capacitor/core": "./dist/vendor/@capacitor/core/dist/index.js",
+          "@capacitor/haptics": "./dist/vendor/@capacitor/haptics/dist/esm/index.js",
+          "@capacitor/preferences": "./dist/vendor/@capacitor/preferences/dist/esm/index.js",
+          "@capacitor/screen-orientation": "./dist/vendor/@capacitor/screen-orientation/dist/esm/index.js",
+          "@capacitor-community/keep-awake": "./dist/vendor/@capacitor-community/keep-awake/dist/esm/index.js"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="topbar">
+          <div><strong>HOPRISE</strong><span>FASE 8 · POLIMENTO E VALIDAÇÃO</span></div>
+        <button id="pause" type="button" aria-label="Pausar ou continuar">Ⅱ</button>
+      </header>
+      <section class="stage" aria-label="Área do jogo">
+        <canvas id="game" width="360" height="540" aria-label="Jogo HOPRISE"></canvas>
+        <button id="tilt" type="button" aria-label="Ativar controle por inclinação" aria-pressed="false">INCL.</button>
+        <div id="panel" class="panel">
+          <p class="eyebrow">BUILD EXPERIMENTAL</p>
+          <h1 id="panel-title">Pronto para subir?</h1>
+          <p id="panel-copy">Colete moedas e buffs, desvie dos espinhos e guardas, e continue subindo pelas plataformas.</p>
+          <div id="panel-stats" class="panel-stats" aria-live="polite"></div>
+          <button id="start" type="button">INICIAR</button>
+          <button id="sound-toggle" class="sound-toggle" type="button" aria-pressed="true">SOM: LIGADO</button>
+          <small>Toque nos lados para mover. INCL. fica disponível na pausa. Tecla M: alternar som.</small>
+        </div>
+      </section>
+      <footer>Teclado: A/D ou setas · Shift: correr · Toque: metade esquerda/direita · ESC: pausar</footer>
+    </main>
+    <script type="module" src="./dist/game.js"></script>
+  </body>
+</html>
+
+

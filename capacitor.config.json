@@ -1,0 +1,10 @@
+{
+  "appId": "com.hoprise.game",
+  "appName": "HOPRISE",
+  "webDir": "dist",
+  "plugins": {
+    "ScreenOrientation": {
+      "orientation": "portrait"
+    }
+  }
+}
